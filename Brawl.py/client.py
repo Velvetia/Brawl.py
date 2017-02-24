@@ -16,6 +16,7 @@ class Client:
         # I'm not quite sure how to correctly implement this, however...
         # I'm thinking maybe set a var for calls, and increment that by one for each usage?
 
+    async def get_user_id(self, steam: str):
         """Finds the user's current name and Brawlhalla ID. The Steam parameter is a int of the Steam account's
         ID64. """
         param = {'steamid': steam, 'api_key': self.key}
