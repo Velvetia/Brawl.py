@@ -2,18 +2,20 @@
 
 Brawlhalla API wrapper written in Python.
 
-Don't count on this to reasonably get finished. This maybe be a project for me, but I am no Python user.
-
-Also, DEFINITELY do not expect this to be good code. There will likely be multiple hashed together workarounds in this. Fair warning.
+I'm trying to aim for this to be simple to understand and to use.
 
 # Installation
 
-You can't yet.
+If you really want to try it out, download the zip, and extract it into your site-programs Python folder. It should usually be found in your Python install directory.
 
-Current Progress: 30%
+# Progress
+
+Current Progress: ~35%
 
 Current Objectives:
 
 - Create classes for most of the response options, so they can be more easily accessed.
 
 - Put the errors.py to good use.
+
+- Make the information in the response JSON more easily accessible. (You currently have to do convoluted stuff like "print(resp["error"]["code"])" in order to get specific items.)
