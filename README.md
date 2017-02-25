@@ -1,4 +1,4 @@
-# Brawlthon
+# Brawl.py
 
 Brawlhalla API wrapper written in Python.
 
