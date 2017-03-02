@@ -8,7 +8,7 @@ base_endpoint = 'https://api.brawlhalla.com'
 class Client:
     # It'd possibly be easier here if you had to set your API key before using
     # the class, like so:
-    # brawl = Brawlthon.Brawlthon(key="examplekey")
+    # brawl = brawlpy.Client(key='examplekey')
     def __init__(self, key: str = None, second=10, fivemin=180):
         # As of Febuary 23, 2017, the amount of requests you can use per second
         # is 10. The amount of requests you can use per 5 minutes is 180.
