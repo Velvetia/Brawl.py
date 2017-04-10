@@ -1,7 +1,7 @@
 import aiohttp
 import asyncio
 import json
-from . import errors
+from . import errors, response
 
 base_endpoint = 'https://api.brawlhalla.com'
 
@@ -33,7 +33,9 @@ class Client:
         """Gets gameplay stats for a user.
         Params: brawlid = String of user's Brawlhalla ID. Found using get_user_id."""
         async with self.session.get('{}/player/{}/stats'.format(self.base_endpoint, brawlid), params=self.key_param) as resp:
-            return await resp.json()
+            untouched = await resp.json()
+            cleaned = response.clean_json(untouched)
+            return response.user_info(usablejson=cleaned)
 
     async def get_rank_stats(self, brawlid: str):
         """Gets ranked stats for a user.
